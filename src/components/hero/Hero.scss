@@ -1,0 +1,221 @@
+.main-video {
+    &__section-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__data-wrapper {
+        border-bottom: solid 1px grey;
+        padding-bottom: 24px;
+    }
+    &__author-date {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+    &__info-wrapper {
+        display: flex;
+        width: 68%;
+        justify-content: space-between;
+    }
+    &__views {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+    &__likes {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+    }
+    &__description {
+        padding: 24px 0;
+    }
+}
+
+// COMMENT SECTION
+.comments {
+    height: auto;
+    max-width: 1200px;
+    margin: auto;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        height: 100%;
+        width: 90%;
+        max-width: 528px;
+        justify-content: space-between;
+        margin: auto;
+    }
+    &__header {
+        margin: auto;
+        padding: 2.5% 0 2.5% 0;
+        width: 90%;
+        height: 5%;
+        // @include tablet {
+        //     padding: 0 0 3.5% 0;
+        //     font-size: 2.1rem;
+        // }
+        // @include desktop {
+        //     padding: auto;
+        //     width: 80%;
+        //     font-size: 2.1rem;
+        // }
+    }
+    &__new {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 75%;
+        align-items: end;
+        // height: 350px;
+        // border-bottom: solid 1px silver;
+        // @include tablet {
+        //     border-bottom: none;
+        //     justify-content: space-between;
+        // }
+    }
+    &__past-wrapper {
+        // @include tablet {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     margin-bottom: 48px;
+        // }
+    }
+    &__past {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: end;
+        height: 195px;
+        border-bottom: solid 1px silver;
+        // @include tablet {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 150px;
+        // }
+    }
+    &__past-comment {
+        line-height: 1.5;
+        margin: 16px 0 0 0px;
+    }
+    // &__img-wrapper {
+    //     width: 48px;
+    //     height: 100px;
+    //     display: flex;
+    //     align-items: flex-end;
+    //     // @include tablet {
+    //     //     height: 90px;
+    //     //     margin-left: 35px;
+    //     // }
+    // }
+    &__photo {
+        background-color: blue;
+        background-position: inherit;
+        background-size: cover;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        margin-top: 15%;
+    }
+    &__past-photo {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background-color: grey;
+        margin: 35px 0;
+        // @include tablet {
+        //     margin: auto;
+        // }
+    }
+    &__text {
+        width: 78%;
+        max-width: 440px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 16px;
+        align-items: flex-end;
+    }
+    &__info {
+        width: 78%;
+        max-width: 440px;
+        display: flex;
+        margin-left: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+    &__label {
+        color: silver;
+        font-family: "avenir-demi-bold";  
+        font-size: .9rem;
+    }
+    &__comment-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 125px;
+        margin: 16px 0px;
+        width: 100%;
+    }
+    &__comment-input {
+        height: 96px;
+    }
+    &__button {
+        background-color: #323232;
+        font-family: "avenir-demi-bold";
+        color: #ffffff;
+        border-radius: 5px;
+        height: 48px;
+        margin-bottom: 10%;
+        padding: 0;
+        width: 100%;
+        &:hover {
+            cursor: pointer;
+        }
+        // @include tablet {
+        //     width: 160px;
+        // }
+        // @include desktop {
+        //     margin: 0 0 10% 64%;
+        // }
+    }
+    &__name {
+        width: 60%;
+        margin: 35px 0 0 0;
+        // @include tablet {
+        //     margin: auto;
+        // }
+    }
+    &__date {
+        width: 40%;
+        text-align: end;
+        margin: 35px 0 0 0;
+        color: silver;
+        // @include tablet {
+        //     margin: auto;
+        // }
+    }
+}
+/********** INPUT FEILDS ***********/
+input[type=text], select, textarea {
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: white;
+    &::placeholder {
+        color: grey;
+    }
+    &::focus {
+        background-color: white;
+    }
+}
