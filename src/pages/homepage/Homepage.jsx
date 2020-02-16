@@ -1,7 +1,9 @@
 // put all components from page into here and render this componenet into app.js
 import React from 'react';
 import Header from '../../components/header/Header'
-import Hero from '../../components/hero/Hero';
+import Comments from '../../components/comments/Comments';
+import Video from '../../components/video/Video'
+import NextVideo from '../../components/next-video/NextVideo';
 
 class Homepage extends React.Component {
     constructor() {
@@ -36,10 +38,12 @@ class Homepage extends React.Component {
             }
     render() {
         return (
-            <>
-                <Header />
-                <Hero />
-            </>
+            <main>
+                <Video />
+                <Comments />
+                <NextVideo />
+                
+            </main>
         )
     }
 }

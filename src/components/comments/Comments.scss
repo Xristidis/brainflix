@@ -1,41 +1,7 @@
-.main-video {
-    &__section-wrapper {
-        width: 90%;
-        margin: auto;
-    }
-    &__image {
-        width: 100%;
-    }
-    &__data-wrapper {
-        border-bottom: solid 1px grey;
-        padding-bottom: 24px;
-    }
-    &__author-date {
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-    }
-    &__info-wrapper {
-        display: flex;
-        width: 68%;
-        justify-content: space-between;
-    }
-    &__views {
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-    }
-    &__likes {
-        display: flex;
-        width: 40%;
-        justify-content: space-between;
-    }
-    &__description {
-        padding: 24px 0;
-    }
-}
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+@import '../../styles/partials/fonts';
 
-// COMMENT SECTION
 .comments {
     height: auto;
     max-width: 1200px;
@@ -49,12 +15,14 @@
         max-width: 528px;
         justify-content: space-between;
         margin: auto;
+        border-bottom: solid 1px $mercury;
     }
     &__header {
         margin: auto;
-        padding: 2.5% 0 2.5% 0;
+        padding: 3.5% 0 2.5% 0;
         width: 90%;
-        height: 5%;
+        font-size: 1rem;
+        // height: 5%;
         // @include tablet {
         //     padding: 0 0 3.5% 0;
         //     font-size: 2.1rem;
@@ -79,6 +47,8 @@
         // }
     }
     &__past-wrapper {
+        width: 90%;
+        margin: auto;
         // @include tablet {
         //     display: flex;
         //     flex-direction: column;
@@ -93,7 +63,9 @@
         width: 100%;
         align-items: end;
         height: 195px;
+        line-height: 1.5;
         border-bottom: solid 1px silver;
+        font-family: "avenir";
         // @include tablet {
         //     display: flex;
         //     justify-content: center;
@@ -101,9 +73,8 @@
         //     height: 150px;
         // }
     }
-    &__past-comment {
-        line-height: 1.5;
-        margin: 16px 0 0 0px;
+    &__content {
+        margin: 16px auto;
     }
     // &__img-wrapper {
     //     width: 48px;
@@ -116,7 +87,7 @@
     //     // }
     // }
     &__photo {
-        background-color: blue;
+        background-image: url(../../assets/images/Mohan-muruge.jpg);
         background-position: inherit;
         background-size: cover;
         height: 48px;
@@ -128,7 +99,7 @@
         height: 48px;
         width: 48px;
         border-radius: 50%;
-        background-color: grey;
+        background-color: $mercury;
         margin: 35px 0;
         // @include tablet {
         //     margin: auto;
@@ -170,8 +141,8 @@
         height: 96px;
     }
     &__button {
-        background-color: #323232;
-        font-family: "avenir-demi-bold";
+        background-color: $bright-blue;
+        font-family: "avenir-bold";
         color: #ffffff;
         border-radius: 5px;
         height: 48px;
@@ -191,6 +162,7 @@
     &__name {
         width: 60%;
         margin: 35px 0 0 0;
+        font-family: "avenir-demi-bold";
         // @include tablet {
         //     margin: auto;
         // }
@@ -207,7 +179,6 @@
 }
 /********** INPUT FEILDS ***********/
 input[type=text], select, textarea {
-    width: 97%;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
