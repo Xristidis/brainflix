@@ -41,8 +41,7 @@ class Homepage extends React.Component {
             <main>
                 <Video />
                 <Comments />
-                <NextVideo />
-                
+                <NextVideo type='test'/>
             </main>
         )
     }
