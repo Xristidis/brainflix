@@ -40,7 +40,7 @@ export default class Video extends React.Component {
   render() {
     console.log(this.props);
     const {
-      video,
+      image,
       description,
       likes,
       views,
@@ -53,7 +53,7 @@ export default class Video extends React.Component {
       <section className="main-video__section-wrapper">
         <>
           <div className="main-video__video-wrapper">
-            <img src={"" + video + ""} className="main-video__image" />
+            <img src={image} className="main-video__image" />
             <div className="main-video__video-buttons">
               <img src={play} className="main-video__play" />
               <div className="main-video__play-bar-wrapper">

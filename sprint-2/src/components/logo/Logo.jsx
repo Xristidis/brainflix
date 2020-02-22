@@ -6,7 +6,7 @@ import "./Logo.scss";
 export default class Logo extends React.Component {
   render() {
     return (
-      <Link className="logo" exact to="/">
+      <Link className="logo" to="/">
         <img
           src={logo}
           alt="logo that reads the word Brainflix"
