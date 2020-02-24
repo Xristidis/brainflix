@@ -58,7 +58,7 @@ export default class Video extends React.Component {
               <img src={play} className="main-video__play" />
               <div className="main-video__play-bar-wrapper">
                 <div className="main-video__play-bar" />
-                <div className="main-video__play-duration">{duration}</div>
+                <div className="main-video__play-duration">0:00/{duration}</div>
               </div>
               <div className="main-video__sound-screen-wrapper">
                 <img src={fullscreen} className="main-video__full-screen" />
