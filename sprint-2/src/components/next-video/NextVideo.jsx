@@ -9,13 +9,9 @@ export default class NextVideo extends React.Component {
         <h3 className="next-video__header">Next Video</h3>
         <div className="next-video__list-wrapper">
           {this.props.nextVideoList
-            // .filter(
-            //   video =>
-            //     mainVideo.id !==
-            //     (this.props.match.params.videoId || this.mainVideo.id)
-            // )
-
-            // COULDNT GET FILTER TO WORK TO REMOVE CURRENT VIDEO FROM VIDEO LIST
+            .filter(videoObj => {
+              return this.props.mainVideo.id !== videoObj.id;
+            })
             .map(videoObj => {
               return (
                 <Link to={`/videos/${videoObj.id}`}>

@@ -56,7 +56,10 @@ class Homepage extends React.Component {
         <Pages>
           <Video {...this.state.mainVideo} />
           <Comments mainVideo={this.state.mainVideo} />
-          <NextVideo nextVideoList={this.state.nextVideoList} />
+          <NextVideo
+            nextVideoList={this.state.nextVideoList}
+            mainVideo={this.state.mainVideo}
+          />
         </Pages>
       </>
     );
