@@ -14,8 +14,8 @@ export default class NextVideo extends React.Component {
             })
             .map(videoObj => {
               return (
-                <Link to={`/videos/${videoObj.id}`}>
-                  <div key={videoObj.id} className="next-video__wrapper">
+                <Link to={`/videos/${videoObj.id}`} key={videoObj.id}>
+                  <div className="next-video__wrapper">
                     <img
                       className="next-video__thumbnail"
                       src={"" + videoObj.image + ""}

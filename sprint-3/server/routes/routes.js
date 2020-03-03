@@ -7,14 +7,15 @@
 //     res.json(videoList);
 // })
 
-const videoListRoutes = require('./videoList');
-const allVideosRoutes = require('./allVideos');
 
 
-const appRouter = (app, fs) => {
 
-    videoListRoutes(app, fs);
-    allVideosRoutes(app, fs);
-};
+// const appRouter = (app, fs) => {
 
-module.exports = appRouter;
+//     videoListRoutes(app, fs);
+//     allVideosRoutes(app, fs);
+// };
+
+
+
+// module.exports = appRouter;

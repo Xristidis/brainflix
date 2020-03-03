@@ -34,7 +34,9 @@ var aDay = 24 * 60 * 60 * 1000;
 
 export default class Comments extends React.Component {
   render() {
-    if (!this.props.mainVideo.comments) {
+    let comments = this.props.mainVideo.comments
+
+    if (!comments) {
       return null;
     } else {
       return (
@@ -68,7 +70,7 @@ export default class Comments extends React.Component {
             </form>
           </div>
           <div className="comments__past-wrapper" id="comments__past-wrapper">
-            {this.props.mainVideo.comments.map(commentObj => {
+            {comments.map(commentObj => {
               return (
                 <div className="comments__past">
                   <img className="comments__past-photo" />

@@ -6,7 +6,6 @@ import Video from "../../components/video/Video";
 import NextVideo from "../../components/next-video/NextVideo";
 import Pages from "../../pages/Page";
 import axios from "axios";
-const apiKey = "?api_key=<c7956832-c973-4faf-a93c-e8e1672bf6ae>";
 
 class Homepage extends React.Component {
   state = {
@@ -18,7 +17,6 @@ class Homepage extends React.Component {
       .get(`http://localhost:8080/videoList`)
       .then(res => {
         const nextVideoList = res.data;
-        console.log(nextVideoList);
         const mainVideoId = nextVideoList[0].id;
         this.setState({ nextVideoList });
         return axios.get(
@@ -64,4 +62,3 @@ class Homepage extends React.Component {
 }
 
 export default Homepage;
-// line 23 equals specific url .. check params to see if url has video is if it doesnt pull first video.
