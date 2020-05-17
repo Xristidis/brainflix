@@ -33,12 +33,11 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 var aDay = 24 * 60 * 60 * 1000;
-console.log(timeSince(new Date(Date.now() - aDay)));
-console.log(timeSince(new Date(Date.now() - aDay * 2)));
+// console.log(timeSince(new Date(Date.now() - aDay)));
+// console.log(timeSince(new Date(Date.now() - aDay * 2)));
 
 export default class Video extends React.Component {
   render() {
-    console.log(this.props);
     const {
       image,
       description,

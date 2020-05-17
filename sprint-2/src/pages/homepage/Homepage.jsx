@@ -25,7 +25,6 @@ class Homepage extends React.Component {
         );
       })
       .then(res => {
-        console.log(res.data);
         const mainVideo = res.data;
         this.setState({ mainVideo });
       });
@@ -35,18 +34,15 @@ class Homepage extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.match.params.videoId !== prevProps.match.params.videoId) {
       const videoId = this.props.match.params.videoId;
-
       axios
         .get(
           `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=<c7956832-c973-4faf-a93c-e8e1672bf6ae>`
         )
         .then(res => {
-          console.log(res.data);
           const mainVideo = res.data;
           const mainVideoComments = res.data.comments;
           this.setState({ mainVideo });
         });
-      console.log(this.state.mainVideoComments);
     }
   }
 
